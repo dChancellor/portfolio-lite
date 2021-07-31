@@ -1,0 +1,28 @@
+@import "./universals.css";
+
+main {
+  background-color: var(--clr-background);
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.themeButton {
+  font-size: 2rem;
+  color: var(--clr-main-button);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  transition: all .7s ease-out;
+}
+
+.loaded.themeButton {
+  top: 100%;
+  left: 100%;
+  transform: translate(-110%, -110%);
+}

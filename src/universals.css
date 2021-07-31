@@ -1,0 +1,40 @@
+/* Import fonts */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  /* Add imported font here */
+  font-family: sans-serif;
+}
+body {
+  line-height: 1.5rem;
+}
+
+button {
+  all: revert;
+  border: none;
+  cursor: pointer;
+}
+
+.dark {
+  --clr-background: hsl(0, 0%, 13%);
+  --clr-primary-text: hsl(357, 100%, 99%);
+  --clr-accent: hsl(180, 100%, 50%);
+  --clr-dark-accent: hsl(200, 90%, 40%);
+}
+
+.light {
+  --clr-background: hsl(357, 100%, 99%);
+  --clr-primary-text: hsl(0, 0%, 13%);
+  --clr-accent: hsl(325, 100%, 43%);
+  --clr-dark-accent: hsl(360, 90%, 33%);
+}
