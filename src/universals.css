@@ -33,7 +33,7 @@ button {
 }
 
 .light {
-  --clr-background: hsl(357, 100%, 99%);
+  --clr-background: hsl(306deg 10% 86%);
   --clr-primary-text: hsl(0, 0%, 13%);
   --clr-accent: hsl(325, 100%, 43%);
   --clr-dark-accent: hsl(360, 90%, 33%);

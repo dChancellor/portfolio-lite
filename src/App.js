@@ -3,13 +3,14 @@ import style from "./App.module.css";
 import Header from "./components/Header/Header";
 import Welcome from "./components/Welcome/Welcome";
 import ThemeButton from "./components/ThemeButton/ThemeButton";
+import About from "./components/About/About";
 
 function App() {
   let [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // setTimeout(() => {
-      setLoading(false);
+    setLoading(false);
     // }, 2000);
   }, []);
 
@@ -22,6 +23,7 @@ function App() {
         <>
           <Header />
           <Welcome />
+          <About />
         </>
       )}
     </main>

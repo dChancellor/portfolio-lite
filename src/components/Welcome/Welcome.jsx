@@ -10,7 +10,7 @@ function Welcome() {
           <h1>Derek Chancellor.</h1>
           <h2>I build things for the web.</h2>
           <p>
-            I am a developer who loves building tools to make lives easier,
+            I'm a developer who loves creating tools to make lives easier,
             actions quicker and experiences better. I'm currently focused on how
             programming can be wielded to solve social issues.
           </p>
