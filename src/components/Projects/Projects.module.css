@@ -1,9 +1,16 @@
-.aboutContainer {
+.projectContainer {
   margin-bottom: 5rem;
   width: clamp(30ch, 45vw, 70ch);
+  display: flex;
+  flex-flow: row wrap;
+  gap: 5rem;
+  justify-content: space-between;
+  max-width: 130rem;
+  padding-left: 13rem;
+  background-color: pink;
 }
-.aboutContainer h1 {
-  color: var(--clr-about);
+.projectContainer h1 {
+  color: var(--clr-projects);
   filter: contrast(30%);
   letter-spacing: 0.2rem;
   font-size: clamp(1rem, 5vw, 2.5rem);
@@ -13,24 +20,17 @@
   width: 80%;
   margin-bottom: 2rem;
 }
-.aboutContainer h1::before {
+.projectContainer h1::before {
   content: '';
   height: 1px;
   width: 10px;
-  background-color: var(--clr-about);
+  background-color: var(--clr-projects);
 }
-.aboutContainer h1::after {
+.projectContainer h1::after {
   content: '';
   margin-left: 1rem;
   height: 1px;
   flex-grow: 2;
   min-width: 30px;
-  background-color: var(--clr-about);
-}
-.aboutContainer p {
-  color: var(--clr-about-muted);
-}
-.aboutContainer a {
-  color: var(--clr-accent);
-  text-decoration: none;
+  background-color: var(--clr-projects);
 }

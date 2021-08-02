@@ -5,6 +5,7 @@ import Welcome from './components/Welcome/Welcome';
 import ThemeButton from './components/ThemeButton/ThemeButton';
 import About from './components/About/About';
 import Technologies from './components/Technologies/Technologies';
+import Projects from './components/Projects/Projects';
 
 function App() {
   let [loading, setLoading] = useState(true);
@@ -29,6 +30,7 @@ function App() {
             <About />
             <Technologies />
           </div>
+          <Projects />
           <div className={style.tempFooter}>Insert Footer Here</div>
         </>
       )}

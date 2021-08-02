@@ -1,0 +1,59 @@
+.techContainer {
+  margin-bottom: 5rem;
+  width: clamp(30ch, 55vw, 70ch);
+  margin-left: auto;
+  padding-right: 13rem;
+}
+.techContainer h1 {
+  color: var(--clr-technologies);
+  filter: contrast(30%);
+  letter-spacing: 0.2rem;
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  text-align: end;
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+.techContainer h1::before {
+  content: '';
+  height: 1px;
+  flex-grow: 2;
+  min-width: 30px;
+  background-color: var(--clr-technologies);
+}
+.techContainer h1::after {
+  content: '';
+  margin-right: 1rem;
+  height: 1px;
+  width: 10px;
+  background-color: var(--clr-technologies);
+}
+.techContainer p {
+  color: var(--clr-technologies-muted);
+}
+.types {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 2rem;
+}
+.typeContainer {
+  height: 200px;
+  width: 200px;
+  flex-basis: 44%;
+  background-color: pink;
+  margin: auto;
+}
+@media screen and (max-width: 1000px) {
+  .typeContainer {
+    flex-basis: 200px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .techContainer {
+    padding-right: 0;
+    margin-left: 0;
+  }
+}

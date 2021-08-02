@@ -1,6 +1,6 @@
 import style from './Socials.module.css';
 import Github from './assets/github.png';
-import LinkedIn from './assets/LI-In-Bug.png';
+import LinkedIn from './assets/linkedin.png';
 
 function Socials() {
   return (

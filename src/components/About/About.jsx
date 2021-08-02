@@ -3,7 +3,7 @@ import style from './About.module.css';
 function About() {
   return (
     <section className={style.aboutContainer}>
-      <h1>About me</h1>
+      <h1>Who I am</h1>
       <p>
         My 'This is awesome!' moment was when I was 8 years old. I developed a
         program which took in user responses to interview questions and at the

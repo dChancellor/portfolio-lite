@@ -47,6 +47,7 @@
 }
 .contact p {
   filter: brightness(30%);
+  padding-top:0;
 }
 .contactButton {
   padding: 1rem 2rem;
@@ -79,6 +80,11 @@
 .contactButton:hover::before {
   opacity: 0.1;
 }
+@media screen and (min-width: 1200px) {
+  .contentContainer {
+    padding-left: 13rem;
+  }
+}
 @media screen and (max-width: 1300px) {
   .contentContainer {
     text-align: center;
@@ -95,5 +101,13 @@
 @media screen and (max-height: 850px) {
   .heroSection {
     margin-top: 12rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contentContainer {
+    padding: 0;
+  }
+  .textContainer {
+    padding: 0 .5rem;
   }
 }

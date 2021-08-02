@@ -24,4 +24,19 @@ main {
 .meContainer {
   display: flex;
   flex-flow: row wrap;
+  gap: 5rem;
+  justify-content: space-between;
+  max-width: 130rem;
+  padding-left: 13rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .meContainer {
+    justify-content: center;
+    padding-left: 0;
+  }
+  .meContainer > * {
+    flex-basis: 66%;
+  }
+}
+
