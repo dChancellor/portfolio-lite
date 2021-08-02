@@ -1,0 +1,38 @@
+.aboutContainer {
+  margin-left: 5rem;
+  margin-bottom: 5rem;
+  max-width: clamp(30ch, 40vw, 70ch);
+}
+.aboutContainer h1 {
+  color: var(--clr-about);
+  filter: contrast(30%);
+  letter-spacing: 0.2rem;
+  font-size: clamp(1rem, 5vw, 2.5rem);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 70%;
+  margin-bottom: 2rem;
+}
+.aboutContainer h1::before {
+  content: '';
+  height: 1px;
+  width: 10px;
+  background-color: var(--clr-about);
+}
+.aboutContainer h1::after {
+  content: '';
+  margin-left: 1rem;
+  height: 1px;
+  flex-grow: 2;
+  background-color: var(--clr-about);
+}
+.aboutContainer p{
+  color: var(--clr-about-muted);
+}
+.aboutContainer a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}

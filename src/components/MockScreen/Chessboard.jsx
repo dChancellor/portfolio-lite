@@ -1,7 +1,7 @@
 import style from "./Chessboard.module.css";
 
 function Chessboard() {
-  const board = new Array(64).fill(0).map((square, index) => {
+  const board = new Array(64).fill(0).map((_, index) => {
     return (
       <div
         key={index}

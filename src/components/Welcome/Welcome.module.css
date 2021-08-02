@@ -5,9 +5,8 @@
 .contentContainer {
   display: flex;
   flex-flow: row wrap-reverse;
-  gap: 1rem;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
   align-content: center;
   gap: 4rem;
 }
@@ -17,29 +16,37 @@
   justify-content: center;
   gap: 1rem;
 }
-h3 {
+.textContainer h3 {
   font-size: clamp(1vw, 1rem, 1.2rem);
   color: var(--clr-accent);
   line-height: clamp(1vw, 1rem, 1.2rem);
 }
-h1 {
-  font-size: clamp(3rem, 8vw, 6rem);
-  color: var(--clr-primary-text);
-  line-height: clamp(3rem, 8vw, 6rem);
+.textContainer h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: clamp(3rem, 7vw, 5rem);
+  letter-spacing: 0.2rem;
 }
-h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: var(--clr-primary-text);
+.textContainer h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  color: var(--clr-accent);
   filter: contrast(10%);
-  line-height: clamp(2rem, 5vw, 4rem);
+  line-height: clamp(2rem, 3vw, 3rem);
 }
-p {
+.textContainer p {
   padding-top: 0.5rem;
-  font-size: clamp(1rem, 5vw, 1.2rem);
-  color: var(--clr-primary-text);
+  line-height: 1.6rem;
+  max-width: 50ch;
   filter: contrast(10%);
-  line-height: clamp(1.2rem, 7vw, 1.4rem);
-  max-width: 58ch;
+}
+.contact {
+  margin-top: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 2rem;
+}
+.contact p {
+  filter: brightness(30%);
 }
 .contactButton {
   padding: 1rem 2rem;
@@ -57,10 +64,9 @@ p {
   color: var(--clr-accent);
   filter: contrast(80%);
   font-size: 1.4rem;
-  margin-top: 2rem;
 }
 .contactButton::before {
-  content: "";
+  content: '';
   width: 100%;
   height: 100%;
   background-color: var(--clr-accent);
@@ -73,12 +79,21 @@ p {
 .contactButton:hover::before {
   opacity: 0.1;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
   .contentContainer {
     text-align: center;
     justify-content: center;
   }
-  .contactButton {
+  .contact {
     align-self: center;
+    justify-content: center;
+  }
+  .textContainer p {
+    align-self: center;
+  }
+}
+@media screen and (max-height: 850px) {
+  .heroSection {
+    margin-top: 12rem;
   }
 }

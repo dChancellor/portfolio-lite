@@ -1,16 +1,11 @@
-.container {
-  width: 300px;
-  height: 300px;
-  position: relative;
-  transform: skew(-10deg, -10deg);
-  margin-left: 4rem;
-  margin-bottom: 4rem;
-}
 .screen {
-  background-color: rgb(135, 170, 158);
+  width: clamp(100px, 300px, 70vw);
+  height: clamp(100px, 300px, 70vw);
+  transform: skew(-10deg, -10deg);
+  position: relative;
+  background-color: rgb(113, 170, 192);
+  box-shadow: 12px 12px 2px 0px var(--clr-accent);
   padding: 1rem;
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,23 +14,18 @@
   animation: fadeIn 7s linear infinite;
   animation-fill-mode: forwards;
 }
-.screen3D {
-  background-color: var(--clr-accent);
-  position: absolute;
-  z-index: -1;
-  top: 10px;
-  left: 10px;
-  height: 100%;
-  width: 100%;
-}
 
-
-@media screen and (max-width: 1200px) {
-  .container {
+@media screen and (max-width: 1300px) {
+  .screen {
     align-self: center;
   }
 }
-
+@media screen and (min-width: 1300px) {
+  .screen {
+    margin-left: 4rem;
+    margin-bottom: 4rem;
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -50,5 +40,3 @@
     opacity: 0;
   }
 }
-
-

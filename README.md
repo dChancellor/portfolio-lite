@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+<div align="center">
+  <br></br>
+  <img src="./.readme-assets/header.gif">
+  <h1>
+    Voyager - a full stack url shortener
+    <br>
+  </h1>      
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <p>
+  A simple url shortener application with a Svelte and p5 front-end that you can stare at for hours. The post endpoints are protected by Google's OAuth, but anyone can access already created slugs.
+    <br>
+  <p>
 
-## Available Scripts
+  <div>
+   <strong>CSS</strong>&nbsp;  <img src="./.readme-assets/css.png">&nbsp; &nbsp; <strong>Vanilla</strong> &nbsp; <img src="./.readme-assets/javascript.png"> &nbsp; &nbsp;  <strong>Svelte</strong> &nbsp; <img src="./.readme-assets/svelte.png"> &nbsp; &nbsp; <strong>NodeJS</strong> &nbsp; <img src="./.readme-assets/nodejs.png"> &nbsp; &nbsp; 
+  </div>
 
-In the project directory, you can run:
+  <br>
+  <p>
+      <img src="https://img.shields.io/github/last-commit/dChancellor/url_shortener?style=flat-square" />
+    <a href='https://simple.wikipedia.org/wiki/MIT_License'>
+        <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
+    </a>
+    <img src="https://img.shields.io/github/issues/dChancellor/url_shortener" />
+    <a href="https://codecov.io/gh/dChancellor/url_shortener">
+      <img src="https://codecov.io/gh/dChancellor/url_shortener/branch/master/graph/badge.svg?token=49KV7U5FO4"/>
+    </a>
+  </p>
 
-### `yarn start`
+ 
+  <img src="/.readme-assets/front.png">
+  <br>
+  <p>
+  refresh to see all 3 ship variations!
+  </p>
+  <br>
+  <img src="./.readme-assets/tests.png">
+  <br>
+  Very proud to now include 100% Test Coverage with 100% passing tests
+</div>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Table of Contents
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+  - [Requirements](#requirements)
+  - [Steps](#steps)
+- [Features](#features)
+- [Upcoming Features](#upcoming-features)
+- [FAQ](#faq)
+  - [I mostly like what you've done, but I want to tweak a few things. Can I fork this and use it myself?](#i-mostly-like-what-youve-done-but-i-want-to-tweak-a-few-things-can-i-fork-this-and-use-it-myself)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Installation
 
-### `yarn test`
+### Requirements
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- A Mongo DB
+> Here are a few options for your mongo DB. You can either run it locally on your system by installing it from [mongodb](https://www.mongodb.com/), spin up a docker container from [docker](https://hub.docker.com/_/mongo/), or have some cloud mongo service such as [atlas](https://www.mongodb.com/cloud/atlas).
 
-### `yarn build`
+- A Google Developer API
+> This is perhaps a bit more complicated, but if you work through the google documentation [here](https://support.google.com/googleapi/answer/6158849?hl=en&ref_topic=7013279) then you will finish with a google client ID, google client secret. Use `[YOUR SERVER DOMAIN HERE]/oauth/google/callback` for your callback url. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- A secure Cookie Key
+> I won't get into choosing how to generate your cookie key here, as there is a lot of easily accessible information. Just make sure that this is not an easily guessed word/key, because it could allow complete access to unauthorized users if they have this.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- A static site host
+> You can either self-host the static files or use one of the many CDN/other services that allow you to host these static files. I find that utilizing the global network that these organizations have allows greater speed from anywhere in the world.
+ 
+### Steps
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1) Fill out the `.env-sample` with all the relevant data, rename it to `.env` and run the server. There is also an included docker package if you prefer to containerize it.
 
-### `yarn eject`
+2) Run the static files on your host.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3) You will need to seed your mongoDB with an initial user. If you don't know your Google ID then perhaps the easiest way to find it is utilize the failedRequests collection. Try and connect to your server(fail because you aren't authorized yet) and then transfer that information over to your users collection.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4) Enjoy the show!
+   
+## Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Beautiful front end that promotes zen-like travelling of the internet
+- Google oAuth for all requests which add information to the database
+- Continuous Integration and Deployment with Github Actions and Docker images
+- Serenity mode. Hide the UI to use it as a screensaver!
+  <br>
+  <img src="./.readme-assets/serenity.gif">
+- New Slug UI
+  <br>
+  <img src="./.readme-assets/new-slug.gif">
+- New User UI
+  <br>
+  <img src="./.readme-assets/new-user.gif">
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Upcoming Features
 
-## Learn More
+- A completed version 2 of the user interface finished in Svelte.
+- A way to seed your database with an initial admin user.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## FAQ
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### I mostly like what you've done, but I want to tweak a few things. Can I fork this and use it myself?
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+> Of course you can! I initially made this tool primarily for myself, but have released it to the wild to help anyone. Take it, change it, morph it and squash it to your heart's desire. 

@@ -16,7 +16,6 @@ function Waves() {
         style={{
           animationDuration: `${Math.random() * index + 5}s`,
           animationTimingFunction: "ease-in-out",
-          animationDelay: `${(Math.random() * index) / 3 + 1}s`,
         }}
         className={`${style.wave} ${style[`wave${index + 1}`]}`}
       ></img>

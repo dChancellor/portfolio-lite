@@ -1,4 +1,4 @@
-/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 *,
 *::before,
@@ -12,13 +12,17 @@ h2,
 h3,
 p {
   margin: 0;
-  /* Add imported font here */
-  font-family: sans-serif;
-}
-body {
-  line-height: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
+h1 {
+  color: var(--clr-primary-text);
+}
+p {
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  color: var(--clr-primary-text);
+  line-height: clamp(1.2rem, 7vw, 1.7rem);
+}
 button {
   all: revert;
   border: none;
@@ -27,14 +31,23 @@ button {
 
 .dark {
   --clr-background: hsl(0, 0%, 13%);
+  --clr-background-gradient: linear-gradient(180deg, #212121, #1c2222, #212121);
   --clr-primary-text: hsl(357, 100%, 99%);
   --clr-accent: hsl(180, 100%, 50%);
   --clr-dark-accent: hsl(200, 90%, 40%);
+  --clr-stars: rgb(182, 182, 50);
+  --clr-about: teal;
+  --clr-about-muted: hsl(180, 24%, 35%);
+  --clr-technologies: hsl(119, 24%, 35%);
+  --clr-technologies-muted: hsl(96, 24%, 35%);
 }
 
 .light {
   --clr-background: hsl(306deg 10% 86%);
+  --clr-background-gradient: linear-gradient(180deg, #fff, #f4f6fb, #fff);
   --clr-primary-text: hsl(0, 0%, 13%);
   --clr-accent: hsl(325, 100%, 43%);
   --clr-dark-accent: hsl(360, 90%, 33%);
+  --clr-stars: rgb(182, 182, 50);
+  --clr-about: teal;
 }

@@ -1,28 +1,27 @@
-@import "./universals.css";
-
 main {
   background-color: var(--clr-background);
-  height: 100%;
-  min-height: 200vh;
-  position: relative;
+  background-image: var(--clr-background-gradient);
 }
 
-.themeButton {
-  font-size: 2rem;
-  color: var(--clr-main-button);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.themeButtonContainer {
   position: fixed;
   left: 50%;
   top: 50%;
-  overflow: hidden;
   transform: translate(-50%, -50%);
-  transition: all .7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
-.loaded.themeButton {
-  top: 100%;
-  left: 100%;
-  transform: translate(-110%, -110%);
+.loaded.themeButtonContainer {
+  top: 96%;
+  left: 96%;
+}
+.tempFooter {
+  height: 50px;
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+}
+.meContainer {
+  display: flex;
+  flex-flow: row wrap;
 }

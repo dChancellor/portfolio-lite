@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 0.6rem;
+}
+.icon {
+  max-height: 2rem;
+  filter: contrast(30%);
+}
+.icon:hover {
+  filter: brightness(150%);
+}
