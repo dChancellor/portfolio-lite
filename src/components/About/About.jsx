@@ -17,8 +17,7 @@ function About() {
       </p>
       <br />
       <p>
-        I'm a self-taught programmer looking for my first developer position.
-        However, I've also had the honor of helping elect a{' '}
+        I'm a self-taught programmer who has also had the honor of helping elect a{' '}
         <a href='https://www.obama.org/'>President of the United States</a>,
         working for one of the{' '}
         <a href='https://www.house.gov/'>

@@ -1,8 +1,5 @@
 .techContainer {
-  margin-bottom: 5rem;
   width: clamp(30ch, 55vw, 70ch);
-  margin-left: auto;
-  padding-right: 13rem;
 }
 .techContainer h1 {
   color: var(--clr-technologies);
@@ -16,19 +13,20 @@
   gap: 1rem;
   width: 80%;
   margin-bottom: 2rem;
+  white-space: nowrap;
 }
 .techContainer h1::before {
   content: '';
   height: 1px;
+  margin-right: 1rem;
   flex-grow: 2;
   min-width: 30px;
   background-color: var(--clr-technologies);
 }
 .techContainer h1::after {
   content: '';
-  margin-right: 1rem;
   height: 1px;
-  width: 10px;
+  min-width: 10px;
   background-color: var(--clr-technologies);
 }
 .techContainer p {
@@ -37,23 +35,129 @@
 .types {
   display: flex;
   flex-flow: row wrap;
+  justify-content: flex-end;
   gap: 2rem;
 }
 .typeContainer {
-  height: 200px;
-  width: 200px;
   flex-basis: 44%;
-  background-color: pink;
-  margin: auto;
 }
-@media screen and (max-width: 1000px) {
-  .typeContainer {
-    flex-basis: 200px;
+.icon {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+.icon::before {
+  content: '';
+  height: 100px;
+  width: 200px;
+  position: relative;
+  border-radius: 29px;
+}
+.icon img {
+  max-height: 70%;
+  position: absolute;
+}
+.design::before {
+  background: linear-gradient(142.35deg, #44728c 15.59%, #9ee6ba 89.12%);
+}
+.design.icon .static {
+  max-height: 55%;
+  left: 47%;
+  top: 15%;
+}
+.design.icon .animated {
+  animation: spin 10s infinite ease-in-out;
+  animation-direction: alternate;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+.frontEnd::before {
+  background: linear-gradient(
+    142.35deg,
+    #64558e 15.59%,
+    rgba(145, 88, 147, 0.84) 89.12%
+  );
+}
+.frontEnd.icon .static {
+  max-height: 55%;
+  box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.233);
+}
+.frontEnd.icon .animated {
+  animation-direction: alternate;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+.FEButton {
+  animation: buttonClick 10s infinite ease-in-out;
+}
+.FEMouse {
+  animation: mouseClick 10s infinite ease-in-out;
+  height: 40%;
+  left: 47%;
+  top: 38%;
+}
+.devOps::before {
+  background: linear-gradient(142.35deg, #bd9d4a 15.59%, #ce8e85 89.12%);
+}
+
+.backEnd::before {
+  background: linear-gradient(142.35deg, #a83f3f 15.59%, #ffd5dd 89.12%);
+}
+@media screen and (max-width: 1750px) {
+  .techContainer {
+    margin-left: 30rem;
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1350px) {
   .techContainer {
-    padding-right: 0;
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .types {
+    justify-content: center;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
+
+@keyframes mouseClick {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes buttonClick {
+  0% {
+    filter: brightness(1);
+  }
+
+  10% {
+    filter: brightness(0.5);
+  }
+  20% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1);
   }
 }

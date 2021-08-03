@@ -1,6 +1,5 @@
 .aboutContainer {
-  margin-bottom: 5rem;
-  width: clamp(30ch, 45vw, 70ch);
+  width: clamp(30ch, 45vw, 60ch);
 }
 .aboutContainer h1 {
   color: var(--clr-about);
@@ -12,11 +11,12 @@
   gap: 1rem;
   width: 80%;
   margin-bottom: 2rem;
+  white-space: nowrap;
 }
 .aboutContainer h1::before {
   content: '';
   height: 1px;
-  width: 10px;
+  min-width: 10px;
   background-color: var(--clr-about);
 }
 .aboutContainer h1::after {
@@ -29,8 +29,19 @@
 }
 .aboutContainer p {
   color: var(--clr-about-muted);
+  font-size: clamp(1rem, 5vw, 1.3rem);
 }
 .aboutContainer a {
   color: var(--clr-accent);
   text-decoration: none;
+}
+@media screen and (max-width: 1750px) {
+  .aboutContainer {
+    margin-right: 30rem;
+  }
+}
+@media screen and (max-width: 1350px) {
+  .aboutContainer {
+    margin-right: 0;
+  }
 }

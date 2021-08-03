@@ -9,21 +9,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 4rem;
+  margin-bottom: 4rem;
 }
 .screen > * {
   animation: fadeIn 7s linear infinite;
   animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
   .screen {
     align-self: center;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .screen {
-    margin-left: 4rem;
-    margin-bottom: 4rem;
+    order: 1;
+    margin-left: 0;
+    margin-bottom: 0;
   }
 }
 @keyframes fadeIn {

@@ -12,18 +12,20 @@ function Welcome() {
           <h2>I use technology to help people.</h2>
           <p>
             I'm a web developer who loves creating tools to make lives easier,
-            actions quicker and experiences better. Right now, I'm focused on how
-            programming can be wielded to solve social issues.
+            actions quicker and experiences better. Right now, I'm focused on
+            how programming can be wielded to solve social issues.
           </p>
-          <div className={style.contact}>
-            <a href='mailto:me@chancellor.tech' className={style.contactButton}>
-              Say Hi 👋
-            </a>
-            <p>or check out my socials</p>
-            <Socials />
-          </div>
         </div>
         <MockScreen />
+      </div>
+      <div className={style.contact}>
+        <a href='mailto:me@chancellor.tech' className={style.contactButton}>
+          Say Hi 👋
+        </a>
+        <div className={style.socials}>
+          <p>or check out my socials</p>
+          <Socials />
+        </div>
       </div>
     </section>
   );
