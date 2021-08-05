@@ -23,7 +23,7 @@ function About() {
         <a href='https://www.house.gov/'>
           most powerful legislative bodies in the world
         </a>{' '}
-        and earning two Bachelor of Arts for Political Science and Sociology
+        and earning two Bachelors of Art for Political Science and Sociology
         from <a href='https://www.umkc.edu/'>UMKC</a>.
       </p>
     </section>
