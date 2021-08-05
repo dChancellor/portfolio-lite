@@ -1,0 +1,56 @@
+.frontEnd::before {
+  background: linear-gradient(
+    142.35deg,
+    #64558e 15.59%,
+    rgba(145, 88, 147, 0.84) 89.12%
+  );
+}
+.frontEnd.icon .static {
+  max-height: 55%;
+  box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.233);
+  border-radius: 5px;
+}
+.frontEnd.icon .animated {
+  animation-direction: alternate;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+.FEButton {
+  animation: buttonClick 8s infinite ease-in-out;
+}
+.FEMouse {
+  animation: mouseClick 8s infinite ease-in-out;
+  height: 40%;
+  left: 47%;
+  top: 38%;
+}
+
+@keyframes mouseClick {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.8);
+  }
+  20% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes buttonClick {
+  0% {
+    filter: brightness(1);
+  }
+
+  10% {
+    filter: brightness(0.5);
+  }
+  20% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}

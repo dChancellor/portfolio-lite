@@ -1,0 +1,59 @@
+.backEnd::before {
+  background: linear-gradient(142.35deg, #a83f3f 15.59%, #ffd5dd 89.12%);
+}
+.backEnd {
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+}
+
+.backEnd.icon .static {
+  max-height: 55%;
+  border-radius: 5px;
+}
+.light {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  animation: blink 10s infinite ease-in-out;
+  animation-direction: alternate;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+.topleft {
+  animation-delay: 3s;
+  top: 29%;
+  left: 42.5%;
+}
+.topright {
+  animation-delay: 8.2s;
+  top: 29%;
+  left: 74%;
+}
+.bottomleft {
+  animation-delay: 13.2s;
+  top: 58%;
+  left: 42.5%;
+}
+.bottomright {
+  animation-delay: 18.7s;
+  top: 58%;
+  left: 74%;
+}
+
+@keyframes blink {
+  0% {
+    background-color: rgb(62, 155, 62);
+  }
+  5% {
+    background-color: rgb(255, 61, 61);
+  }
+  10% {
+    background-color: rgb(62, 155, 62);
+  }
+
+  100% {
+    background-color: rgb(62, 155, 62);
+  }
+}

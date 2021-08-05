@@ -1,0 +1,37 @@
+.devOps::before {
+  background: linear-gradient(142.35deg, #bd9d4a 15.59%, #ce8e85 89.12%);
+}
+.devOps.icon .static {
+  max-height: 55%;
+  box-shadow: -3px 3px 3px 1px rgba(0, 0, 0, 0.233);
+  border-radius: 5px;
+}
+
+.devOps.icon .bash {
+  font-size: 1.4em;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  color: white;
+}
+
+.bash span {
+  animation: blink 4s infinite ease-in-out;
+  animation-direction: alternate;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

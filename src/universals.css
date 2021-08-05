@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500;800;900&display=swap');
 *,
 *::before,
 *::after {
@@ -28,18 +27,20 @@ button {
   border: none;
   cursor: pointer;
 }
-
+ul {
+  all: unset;
+}
 .dark {
   --clr-background: hsl(0, 0%, 13%);
   --clr-background-gradient: linear-gradient(180deg, #212121, #1c2222, #212121);
   --clr-primary-text: hsl(357, 100%, 99%);
   --clr-accent: hsl(180, 100%, 50%);
   --clr-dark-accent: hsl(200, 90%, 40%);
-  --clr-stars: rgb(182, 182, 50);
-  --clr-about: teal;
+  --clr-stars: rgb(241, 165, 0);
+  --clr-about: hsl(180deg 13% 50%);
   --clr-about-muted: hsl(180, 24%, 35%);
-  --clr-technologies: hsl(46, 24%, 35%);
-  --clr-technologies-muted: hsl(64, 24%, 35%);
+  --clr-technologies: hsl(0, 53%, 77%);
+  --clr-technologies-muted: hsl(0, 33%, 67%);
   --clr-projects: hsl(0, 56%, 37%);
   --clr-projects-muted: hsl(0, 24%, 35%);
 }
@@ -52,4 +53,9 @@ button {
   --clr-dark-accent: hsl(360, 90%, 33%);
   --clr-stars: rgb(182, 182, 50);
   --clr-about: teal;
+}
+
+#root {
+  background-color: var(--clr-background);
+  background-image: var(--clr-background-gradient);
 }

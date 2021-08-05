@@ -26,11 +26,13 @@ function App() {
         <>
           <Nav />
           <Welcome />
-          <div className={style.meContainer}>
-            <About />
-            <Technologies />
-          </div>
-          <Projects />
+          <section className={style.content}>
+            <div className={style.meContainer}>
+              <About />
+              <Technologies />
+            </div>
+            <Projects />
+          </section>
           <div className={style.tempFooter}>Insert Footer Here</div>
         </>
       )}

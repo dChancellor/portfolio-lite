@@ -1,23 +1,11 @@
-.aboutContainer {
-  width: clamp(30ch, 45vw, 60ch);
-}
 .aboutContainer h1 {
   color: var(--clr-about);
-  filter: contrast(30%);
-  letter-spacing: 0.2rem;
-  font-size: clamp(1rem, 5vw, 2.5rem);
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 80%;
-  margin-bottom: 2rem;
-  white-space: nowrap;
 }
-.aboutContainer h1::before {
+.aboutContainer h1:before {
   content: '';
   height: 1px;
   min-width: 10px;
-  background-color: var(--clr-about);
+  background-color: currentColor;
 }
 .aboutContainer h1::after {
   content: '';
@@ -25,23 +13,25 @@
   height: 1px;
   flex-grow: 2;
   min-width: 30px;
-  background-color: var(--clr-about);
+  background-color: currentColor;
 }
 .aboutContainer p {
   color: var(--clr-about-muted);
   font-size: clamp(1rem, 5vw, 1.3rem);
+  max-width: 50ch;
 }
 .aboutContainer a {
   color: var(--clr-accent);
   text-decoration: none;
+  position: relative;
+  background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);
+  background-position: 0% 103%, 100% 103%;
+  background-repeat: no-repeat;
+  background-size: 0% 1px;
+  transition: background-size 0.3s;
 }
-@media screen and (max-width: 1750px) {
-  .aboutContainer {
-    margin-right: 30rem;
-  }
-}
-@media screen and (max-width: 1350px) {
-  .aboutContainer {
-    margin-right: 0;
-  }
+
+.aboutContainer a:hover,
+a:focus {
+  background-size: 50% 2px;
 }

@@ -17,7 +17,7 @@
   animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1225px) {
   .screen {
     align-self: center;
     order: 1;

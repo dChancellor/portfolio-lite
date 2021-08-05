@@ -1,0 +1,26 @@
+.design::before {
+  background: linear-gradient(142.35deg, #44728c 15.59%, #9ee6ba 89.12%);
+}
+.static {
+  max-height: 55%;
+  left: 47%;
+  top: 15%;
+}
+.animated {
+  animation: spin 4s infinite ease-in-out;
+  animation-direction: alternate;
+  transform-origin: center;
+  animation-fill-mode: both;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(120deg);
+  }
+}
