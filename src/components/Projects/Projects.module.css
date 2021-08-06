@@ -1,10 +1,14 @@
 .projectsContainer {
   margin-top: 5rem;
   align-self: center;
-  width: 100%;
+  width: 80%;
+  gap: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
 }
+
 .projectsContainer h1 {
-  color: var(--clr-projects);
+  color: var(--clr-about);
   margin: auto;
   text-align: center;
   display: flex;
@@ -31,7 +35,6 @@
   display: flex;
   flex-flow: row nowrap;
   position: relative;
-  margin: 2rem auto;
   width: 100%;
   height: 100%;
   box-shadow: -3px 3px 10px 5px rgba(20, 20, 20, 0.452);
@@ -67,30 +70,117 @@
   padding: 2rem;
   z-index: 2;
   min-height: 50vw;
+  position: relative;
 }
 
 .project h2 {
-  color: var(--clr-projects);
+  color: var(--clr-about);
   font-size: clamp(1.5rem, 5vw, 2.7rem);
   font-weight: 900;
   width: 100%;
 }
 
-.project p {
-  color: var(--clr-projects);
-  font-size: clamp(1rem, 2vw, 1.5rem);
-}
+.content p {
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
 
-.icons {
+  gap: 2rem;
+}
+.techContainer {
   display: flex;
   flex-flow: row wrap;
-  background-color: rgba(12, 12, 12, 0.404);
-  width: auto;
-  gap: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 15px;
+  gap: 1rem;
+}
+.technologyTag {
+  font-size: clamp(0.5rem, 2vw, 0.7rem);
+  color: white;
+  background-color: var(--clr-about-muted);
+  border-radius: 10px;
+  padding: 0.2rem 0.6rem;
+  text-align: center;
 }
 
-.icons img {
-  max-height: 32px;
+@media screen and (min-width:1100px) {
+  .project {
+    width: 100%;
+    height: 350px;
+    box-shadow: none;
+  }
+  .project::after {
+    content: none;
+  }
+
+  .preview {
+    position: absolute;
+    height: 80%;
+    z-index: 0;
+    box-shadow: -2px 2px 4px 1px rgba(5, 5, 5, 0.7);
+    width: auto;
+    cursor: pointer;
+  }
+
+  li:nth-child(even) .preview {
+    left: 0%;
+  }
+  li:nth-child(odd) .preview {
+    right: 0%;
+  }
+  li:nth-child(even):hover .content p {
+    transform: translateY(-10px);
+  }
+  li:nth-child(odd):hover .content p {
+    transform: translateY(-10px);
+  }
+  .content {
+    min-height: 0;
+  }
+  .content p {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 30%;
+    background-color: #1c1c1c;
+    box-shadow: -2px 2px 4px 1px rgba(5, 5, 5, 0.7);
+    padding: 2rem;
+    transition: all 0.5s ease-out;
+    gap: 2rem;
+  }
+  li:nth-child(even) .content p {
+    left: 30%;
+    right: 0;
+  }
+  li:nth-child(odd) .content p {
+    right: 30%;
+    left: 0;
+  }
+  .content h2 {
+    position: absolute;
+    right: 0;
+    top: 20.5%;
+    z-index: 2;
+    width: auto;
+  }
+  li:nth-child(even) .content h2 {
+    right: 0;
+  }
+  li:nth-child(odd) .content h2 {
+    left: 0;
+  }
+  .techContainer {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    bottom: 10%;
+    width: auto;
+    max-height: 6rem;
+    z-index: 10;
+    margin: 1rem 1rem;
+  }
+  li:nth-child(even) .content .techContainer {
+    align-self: flex-start;
+  }
+  li:nth-child(odd) .content .techContainer {
+    align-self: flex-end;
+  }
 }

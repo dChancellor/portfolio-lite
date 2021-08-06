@@ -30,6 +30,9 @@ button {
 ul {
   all: unset;
 }
+li {
+  list-style-type: none;
+}
 .dark {
   --clr-background: hsl(0, 0%, 13%);
   --clr-background-gradient: linear-gradient(180deg, #212121, #1c2222, #212121);

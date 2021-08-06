@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
+import {revealTransitionUp} from '@lib/transitions';
 import style from './Technologies.module.css';
 import FrontEnd from './micro-components/FrontEnd';
 import BackEnd from './micro-components/BackEnd';
@@ -9,30 +10,24 @@ import Design from './micro-components/Design';
 function Technologies() {
   const zones = [<Design />, <FrontEnd />, <DevOps />, <BackEnd />];
   const transitionTargets = useRef([]);
-
-  const slideUp = {
-    distance: '30%',
-    origin: 'bottom',
-    opacity: 0,
-  };
+  const header = useRef(null);
 
   useEffect(() => {
-    // ScrollReveal.reveal('test')
+    ScrollReveal().reveal(header.current, revealTransitionUp(1));
     transitionTargets.current.forEach((ref, index) =>
-      ScrollReveal().reveal(ref, slideUp)
+      ScrollReveal().reveal(ref, revealTransitionUp(index))
     );
   }, []);
 
   return (
     <section className={style.techContainer}>
-      <h1>What I Do</h1>
+      <h1 ref={header}>What I Do</h1>
       <div className={style.zones}>
         {zones.map((zone, index) => {
           return (
             <div
               key={index}
               ref={(element) => (transitionTargets.current[index] = element)}
-              // ref={(element) => console.log(element)}
               className={`${style.zone}`}>
               {zone}
             </div>

@@ -1,7 +1,7 @@
-import Wave1 from "./assets/1.png";
-import Wave2 from "./assets/2.png";
-import Wave3 from "./assets/3.png";
-import Wave4 from "./assets/4.png";
+import Wave1 from "../assets/1.png";
+import Wave2 from "../assets/2.png";
+import Wave3 from "../assets/3.png";
+import Wave4 from "../assets/4.png";
 
 import style from "./Waves.module.css";
 

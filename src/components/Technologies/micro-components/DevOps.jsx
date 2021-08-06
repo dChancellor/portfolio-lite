@@ -15,7 +15,7 @@ function DevOps() {
         </h3>
       </div>
       <h2>Dev-Ops</h2>
-      <p>Github, Docker, AWS Lightsail </p>
+      <p>Git, Github Actions, Docker, AWS Lightsail </p>
     </>
   );
 }

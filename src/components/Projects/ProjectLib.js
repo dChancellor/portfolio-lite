@@ -19,15 +19,15 @@ const projects = [
     description:
       'A URL shortener with OAuth for POST endpoints. Now included with 100% server test coverage.',
     icons: [GithubActions, Javascript, Svelte, NodeJS, AWS, Docker, Mongo],
-    preview: Voyager,
-  },
-  {
-    name: 'EvalGuessr',
-    live_url: 'https://evalguessr.chancellor.tech',
-    github_url: 'https://github.com/dChancellor/EvalGuessr',
-    description:
-      'A one weekend only challenge build I participated in. It uses the Lichess API and Stockfish to evaluate real games at a random move and the user tries determining what the evaluation is as quickly as possible. This has even improved my chess skills!',
-    icons: [GithubActions, React, NodeJS, AWS, Docker],
+    tech: [
+      'Github Actions',
+      'Javascript',
+      'Svelte',
+      'NodeJS',
+      'AWS Lightsail',
+      'Docker',
+      'MongoDB',
+    ],
     preview: Voyager,
   },
   {
@@ -35,8 +35,17 @@ const projects = [
     live_url: 'https://bookwise.chancellor.tech',
     github_url: 'https://github.com/dChancellor/notes',
     description:
-      'A note taking application to use alongside reading books. Allows you to make',
-    icons: [Svelte],
+      'A book note-taking application. Uses Samwise, my GraphQL NodeJS backend personal assistant.',
+    tech: ['Svelte', 'GraphQL', 'NodeJS'],
+    preview: Voyager,
+  },
+  {
+    name: 'EvalGuessr',
+    live_url: 'https://evalguessr.chancellor.tech',
+    github_url: 'https://github.com/dChancellor/EvalGuessr',
+    description:
+      'A one weekend only challenge build. It uses the Lichess API and Stockfish to evaluate real games played. Hone your chess evaluation skills and improve your game!',
+    tech: ['Github Actions', 'React', 'NodeJS', 'AWS Lightsail', 'Docker'],
     preview: Voyager,
   },
   {
@@ -44,8 +53,8 @@ const projects = [
     live_url: 'https://sudoku.chancellor.tech',
     github_url: 'https://github.com/dChancellor/sudoku-solver',
     description:
-      'A real world example of using a backtracking algorithm to solve the NYT Daily Sudoku Puzzle. Scrapes the NYT for the 3 daily puzzles and then solves it.',
-    icons: [Javascript, NodeJS, AWS, Docker, GithubActions],
+      'Scrapes the NYT and uses a backtracking algorithm to solve the NYT Daily Sudoku Puzzles.',
+    tech: ['Javascript', 'NodeJS', 'AWS Lightsail', 'Docker'],
     preview: Voyager,
   },
 ];

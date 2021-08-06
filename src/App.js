@@ -31,7 +31,7 @@ function App() {
               <About />
               <Technologies />
             </div>
-            {/* <Projects /> */}
+            <Projects />
           </section>
           <div className={style.tempFooter}>Insert Footer Here</div>
         </>

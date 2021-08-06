@@ -1,8 +1,8 @@
 import { useEffect, useState, useMemo } from 'react';
-import Chessboard from './Chessboard';
-import Sudoku from './Sudoku';
-import Notes from './Notes';
-import Waves from './Waves';
+import Chessboard from './screens/Chessboard';
+import Sudoku from './screens/Sudoku';
+import Notes from './screens/Notes';
+import Waves from './screens/Waves';
 import style from './MockScreen.module.css';
 
 function MockScreen() {
