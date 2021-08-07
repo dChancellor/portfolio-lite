@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import SmoothScroll from 'smooth-scroll';
 import style from './App.module.css';
 import Nav from './components/Nav/Nav';
 import Welcome from './components/Welcome/Welcome';
@@ -6,10 +7,12 @@ import ThemeButton from './components/ThemeButton/ThemeButton';
 import About from './components/About/About';
 import Technologies from './components/Technologies/Technologies';
 import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   let [loading, setLoading] = useState(true);
-
+  var scroll = new SmoothScroll('a[href*="#"]');
   useEffect(() => {
     // setTimeout(() => {
     setLoading(false);
@@ -33,7 +36,8 @@ function App() {
             </div>
             <Projects />
           </section>
-          <div className={style.tempFooter}>Insert Footer Here</div>
+          <Contact />
+          <Footer />
         </>
       )}
     </main>

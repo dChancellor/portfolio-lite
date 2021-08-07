@@ -35,7 +35,7 @@ function Projects() {
 
   return (
     <>
-      <ul className={style.projectsContainer}>
+      <ul id='Projects' className={style.projectsContainer}>
         <h1>What I've Made</h1>
         {projects.map((project, index) => (
           <li
@@ -48,27 +48,42 @@ function Projects() {
             />
             <div className={style.content}>
               <h2>{project.name}</h2>
-              <p>
-                {project.description}
-                <div className={style.techContainer}>
-                  {project.tech.map((tech) => (
-                    <div className={style.technologyTag}>{tech}</div>
-                  ))}
-                </div>
-              </p>
-              <div className={style.links}>
+              <p>{project.description}</p>
+              {/* <div className={style.techContainer}>
+                {project.tech.map((tech) => (
+                  <div className={style.technologyTag}>{tech}</div>
+                ))}
+              </div> */}
+              {/* <div className={style.links}>
                 <a href={project.github_url}>
                   <img src={Github} alt='Repo URL' />
                 </a>
                 <a href={project.live_url}>
                   <div className={style.liveURLButton}>Live URL</div>
                 </a>
-              </div>
+              </div> */}
             </div>
           </li>
         ))}
       </ul>
-      {randomRepo && <div>{randomRepo.git_url}</div>}
+      {randomRepo && (
+        <div className={style.randomContainer}>
+          <h3>
+            And here is a randomized project I pulled from my Github - just for
+            you!
+          </h3>
+          <div className={style.randomProjectContainer}>
+            <h2>{randomRepo.name}</h2>
+            <p>{randomRepo.description}</p>
+            <a
+              rel='noreferrer noopener'
+              target='_blank'
+              href={randomRepo.html_url}>
+              Github
+            </a>
+          </div>
+        </div>
+      )}
     </>
   );
 }

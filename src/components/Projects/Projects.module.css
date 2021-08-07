@@ -8,7 +8,7 @@
 }
 
 .projectsContainer h1 {
-  color: var(--clr-about);
+  color: var(--clr-accent);
   margin: auto;
   text-align: center;
   display: flex;
@@ -51,7 +51,7 @@
 
 .project::after {
   content: '';
-  background-color: rgba(48, 48, 48, 0.479);
+  background-color: rgba(48, 48, 48, 0.9);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -69,13 +69,13 @@
   width: 100%;
   padding: 2rem;
   z-index: 2;
-  min-height: 50vw;
+  min-height: 35vw;
   position: relative;
 }
 
 .project h2 {
-  color: var(--clr-about);
-  font-size: clamp(1.5rem, 5vw, 2.7rem);
+  color: var(--clr-secondary);
+  font-size: clamp(1.5rem, 5vw, 2.1rem);
   font-weight: 900;
   width: 100%;
 }
@@ -85,7 +85,6 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-
   gap: 2rem;
 }
 .techContainer {
@@ -101,8 +100,25 @@
   padding: 0.2rem 0.6rem;
   text-align: center;
 }
-
-@media screen and (min-width:1100px) {
+.randomContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  align-self: center;
+  gap: 3rem;
+  margin-top: 5rem;
+}
+.randomProjectContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 3rem;
+  width: 80%;
+}
+.randomProjectContainer p {
+  width: 60%;
+}
+@media screen and (min-width: 1100px) {
   .project {
     width: 100%;
     height: 350px;
@@ -139,8 +155,8 @@
   .content p {
     position: absolute;
     right: 0;
-    bottom: 0;
-    top: 30%;
+    bottom: 55%;
+    top: 10%;
     background-color: #1c1c1c;
     box-shadow: -2px 2px 4px 1px rgba(5, 5, 5, 0.7);
     padding: 2rem;
@@ -158,10 +174,12 @@
   .content h2 {
     position: absolute;
     right: 0;
-    top: 20.5%;
+    top: 3%;
     z-index: 2;
     width: auto;
+    filter: contrast(70%);
   }
+
   li:nth-child(even) .content h2 {
     right: 0;
   }
@@ -170,7 +188,8 @@
   }
   .techContainer {
     display: flex;
-    flex-flow: row wrap-reverse;
+    flex-flow: row wrap;
+    position: absolute;
     bottom: 10%;
     width: auto;
     max-height: 6rem;
@@ -179,6 +198,8 @@
   }
   li:nth-child(even) .content .techContainer {
     align-self: flex-start;
+    left: 50%;
+    right: 0%;
   }
   li:nth-child(odd) .content .techContainer {
     align-self: flex-end;

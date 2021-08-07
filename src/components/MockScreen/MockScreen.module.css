@@ -3,7 +3,7 @@
   height: clamp(100px, 300px, 70vw);
   transform: skew(-10deg, -10deg);
   position: relative;
-  background-color: rgb(113, 170, 192);
+  background-color: rgb(124, 174, 216);
   box-shadow: 12px 12px 2px 0px var(--clr-accent);
   padding: 1rem;
   display: flex;

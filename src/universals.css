@@ -37,12 +37,12 @@ li {
   --clr-background: hsl(0, 0%, 13%);
   --clr-background-gradient: linear-gradient(180deg, #212121, #1c2222, #212121);
   --clr-primary-text: hsl(357, 100%, 99%);
-  --clr-accent: hsl(180, 100%, 50%);
+  --clr-accent: #00ffff;
   --clr-dark-accent: hsl(200, 90%, 40%);
   --clr-stars: rgb(241, 165, 0);
   --clr-about: hsl(180deg 13% 50%);
-  --clr-about-muted: hsl(180, 24%, 35%);
-  --clr-technologies: hsl(0, 53%, 77%);
+  --clr-text-muted: hsl(180, 24%, 35%);
+  --clr-secondary: hsl(0, 44%, 74%);
   --clr-technologies-muted: hsl(0, 33%, 67%);
   --clr-projects: hsl(0, 56%, 37%);
   --clr-projects-muted: hsl(0, 24%, 35%);
@@ -50,7 +50,7 @@ li {
 
 .light {
   --clr-background: hsl(306deg 10% 86%);
-  --clr-background-gradient: linear-gradient(180deg, #fff, #f4f6fb, #fff);
+  --clr-background-gradient: linear-gradient(180deg, hsl(306deg 30% 91%), hsl(306deg 10% 86%), hsl(306deg 30% 91%));
   --clr-primary-text: hsl(0, 0%, 13%);
   --clr-accent: hsl(325, 100%, 43%);
   --clr-dark-accent: hsl(360, 90%, 33%);

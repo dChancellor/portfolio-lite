@@ -1,5 +1,5 @@
 .aboutContainer h1 {
-  color: var(--clr-about);
+  color: var(--clr-accent);
 }
 .aboutContainer h1:before {
   content: '';
@@ -16,7 +16,7 @@
   background-color: currentColor;
 }
 .aboutContainer p {
-  color: var(--clr-about-muted);
+  color: var(--clr-text-muted);
   font-size: clamp(1rem, 5vw, 1.3rem);
   max-width: 50ch;
 }

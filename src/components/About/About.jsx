@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
-import {revealTransitionUp} from '@lib/transitions';
+import { revealTransitionUp } from '@lib/transitions';
 import style from './About.module.css';
 
 function About() {
@@ -15,7 +15,7 @@ function About() {
   }, []);
 
   return (
-    <section className={style.aboutContainer}>
+    <section id='About' className={style.aboutContainer}>
       <h1 ref={header}>Who I am</h1>
       <p ref={(element) => (transitionTargets.current[0] = element)}>
         My 'This is awesome!' moment was when I was 8 years old. I developed a

@@ -11,7 +11,7 @@ function Welcome() {
       <div className={style.contentContainer}>
         <div className={style.textContainer}>
           <h3>Welcome! My name is</h3>
-          <h1>Derek Chancellor.</h1>
+          <h1>{`<redacted>`}</h1>
           <h2>I use technology to help people.</h2>
           <p>
             I'm a web developer who loves creating tools to make lives easier,

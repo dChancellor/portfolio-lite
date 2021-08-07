@@ -8,8 +8,9 @@ import Mongo from './assets/icons/Mongo.png';
 import React from './assets/icons/React.png';
 
 import Voyager from './assets/voyager.gif';
-// import EvalGuessr from './assets/EvalGuessr.png';
-// import Sudoku from './assets/Sudoku.png';
+import Bookwise from './assets/Bookwise.png';
+import EvalGuessr from './assets/EvalGuessr.png';
+import Sudoku from './assets/Sudoku.png';
 
 const projects = [
   {
@@ -37,7 +38,7 @@ const projects = [
     description:
       'A book note-taking application. Uses Samwise, my GraphQL NodeJS backend personal assistant.',
     tech: ['Svelte', 'GraphQL', 'NodeJS'],
-    preview: Voyager,
+    preview: Bookwise,
   },
   {
     name: 'EvalGuessr',
@@ -46,7 +47,7 @@ const projects = [
     description:
       'A one weekend only challenge build. It uses the Lichess API and Stockfish to evaluate real games played. Hone your chess evaluation skills and improve your game!',
     tech: ['Github Actions', 'React', 'NodeJS', 'AWS Lightsail', 'Docker'],
-    preview: Voyager,
+    preview: EvalGuessr,
   },
   {
     name: 'Sudoku Solver',
@@ -55,7 +56,7 @@ const projects = [
     description:
       'Scrapes the NYT and uses a backtracking algorithm to solve the NYT Daily Sudoku Puzzles.',
     tech: ['Javascript', 'NodeJS', 'AWS Lightsail', 'Docker'],
-    preview: Voyager,
+    preview: Sudoku,
   },
 ];
 
