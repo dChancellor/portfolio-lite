@@ -1,10 +1,9 @@
+// eslint-disable-next-line no-unused-vars
 import style from './Footer.module.css';
-import Socials from '../Socials/Socials';
 
 function Footer() {
   return (
-    <>
-      <Socials />
+    <footer>
       <p>Made by Derek Chancellor</p>
       <p>
         Code can be found{' '}
@@ -15,7 +14,7 @@ function Footer() {
           here
         </a>
       </p>
-    </>
+    </footer>
   );
 }
 export default Footer;

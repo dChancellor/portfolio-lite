@@ -5,10 +5,16 @@ import LinkedIn from './assets/linkedin.png';
 function Socials() {
   return (
     <div className={style.container}>
-      <a href='https://github.com/dChancellor'>
+      <a
+        rel='noreferrer noopener'
+        target='_blank'
+        href='https://github.com/dChancellor'>
         <img className={style.icon} src={Github} alt='Github' />
       </a>
-      <a href='https://www.linkedin.com/in/derekholtzman/'>
+      <a
+        rel='noreferrer noopener'
+        target='_blank'
+        href='https://www.linkedin.com/in/derekholtzman/'>
         <img className={style.icon} src={LinkedIn} alt='LinkedIn' />
       </a>
     </div>

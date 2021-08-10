@@ -1,12 +1,3 @@
-import GithubActions from './assets/icons/GithubActions.png';
-import Javascript from './assets/icons/Javascript.png';
-import Svelte from './assets/icons/Svelte.png';
-import NodeJS from './assets/icons/NodeJS.png';
-import AWS from './assets/icons/AWS.png';
-import Docker from './assets/icons/Docker.png';
-import Mongo from './assets/icons/Mongo.png';
-import React from './assets/icons/React.png';
-
 import Voyager from './assets/voyager.gif';
 import Bookwise from './assets/Bookwise.png';
 import EvalGuessr from './assets/EvalGuessr.png';
@@ -19,7 +10,6 @@ const projects = [
     github_url: 'https://github.com/dChancellor/voyager',
     description:
       'A URL shortener with OAuth for POST endpoints. Now included with 100% server test coverage.',
-    icons: [GithubActions, Javascript, Svelte, NodeJS, AWS, Docker, Mongo],
     tech: [
       'Github Actions',
       'Javascript',

@@ -21,7 +21,7 @@
   max-width: 50ch;
 }
 .aboutContainer a {
-  color: var(--clr-accent);
+  color: var(--clr-secondary);
   text-decoration: none;
   position: relative;
   background-image: linear-gradient(currentColor, currentColor), linear-gradient(currentColor, currentColor);

@@ -5,17 +5,23 @@ import projects from './ProjectLib';
 import style from './Projects.module.css';
 
 import React from './assets/icons/React.png';
-import Github from './assets/icons/Github.png';
 
 function Projects() {
   const projectsRef = useRef([]);
   const [randomRepo, setRandomRepo] = useState(null);
+  const header = useRef(null);
+  const randomProject = useRef(null);
 
   useEffect(() => {
+    ScrollReveal().reveal(header.current, revealTransitionUp(1));
     projectsRef.current.forEach((ref, index) =>
       ScrollReveal().reveal(ref, revealTransitionUp(index))
     );
   }, []);
+
+  useEffect(() => {
+    ScrollReveal().reveal(randomProject.current, revealTransitionUp(1));
+  }, [randomRepo]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,18 +33,23 @@ function Projects() {
           },
         }
       );
-      const { items } = await response.json();
-      setRandomRepo(items[Math.floor(Math.random() * items.length)]);
+      const data = await response.json();
+      let { items } = data && data;
+      if (items)
+        setRandomRepo(items[Math.floor(Math.random() * items?.length)]);
     };
     fetchData();
   }, []);
 
   return (
-    <>
-      <ul id='Projects' className={style.projectsContainer}>
-        <h1>What I've Made</h1>
+    <section id='Projects' className={style.projectsContainer}>
+      <h1 ref={header} className={style.header}>
+        What I've Made
+      </h1>
+      <ul className={style.projects}>
         {projects.map((project, index) => (
           <li
+            key={project.name}
             ref={(element) => (projectsRef.current[index] = element)}
             className={style.project}>
             <img
@@ -49,25 +60,33 @@ function Projects() {
             <div className={style.content}>
               <h2>{project.name}</h2>
               <p>{project.description}</p>
-              {/* <div className={style.techContainer}>
+              <div className={style.techContainer}>
                 {project.tech.map((tech) => (
-                  <div className={style.technologyTag}>{tech}</div>
+                  <div key={tech} className={style.technologyTag}>
+                    {tech}
+                  </div>
                 ))}
-              </div> */}
-              {/* <div className={style.links}>
-                <a href={project.github_url}>
-                  <img src={Github} alt='Repo URL' />
+              </div>
+              <div className={style.links}>
+                <a
+                  rel='noreferrer noopener'
+                  target='_blank'
+                  href={project.github_url}>
+                  Github
                 </a>
-                <a href={project.live_url}>
-                  <div className={style.liveURLButton}>Live URL</div>
+                <a
+                  rel='noreferrer noopener'
+                  target='_blank'
+                  href={project.live_url}>
+                  Live URL
                 </a>
-              </div> */}
+              </div>
             </div>
           </li>
         ))}
       </ul>
       {randomRepo && (
-        <div className={style.randomContainer}>
+        <div ref={randomProject} className={style.randomContainer}>
           <h3>
             And here is a randomized project I pulled from my Github - just for
             you!
@@ -79,12 +98,12 @@ function Projects() {
               rel='noreferrer noopener'
               target='_blank'
               href={randomRepo.html_url}>
-              Github
+              View on Github
             </a>
           </div>
         </div>
       )}
-    </>
+    </section>
   );
 }
 

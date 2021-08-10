@@ -8,5 +8,5 @@
   filter: contrast(30%);
 }
 .icon:hover {
-  filter: brightness(150%);
+  filter: brightness(50%);
 }

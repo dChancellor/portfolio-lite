@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import SmoothScroll from 'smooth-scroll';
 import style from './App.module.css';
 import Nav from './components/Nav/Nav';
@@ -11,35 +10,27 @@ import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 
 function App() {
-  let [loading, setLoading] = useState(true);
+  // eslint-disable-next-line no-unused-vars
   var scroll = new SmoothScroll('a[href*="#"]');
-  useEffect(() => {
-    // setTimeout(() => {
-    setLoading(false);
-    // }, 2000);
-  }, []);
 
   return (
     <main>
-      <div
-        className={`${!loading && style.loaded} ${style.themeButtonContainer}`}>
-        <ThemeButton loading={loading} scale={'1'} />
-      </div>
-      {!loading && (
-        <>
-          <Nav />
-          <Welcome />
-          <section className={style.content}>
-            <div className={style.meContainer}>
-              <About />
-              <Technologies />
-            </div>
-            <Projects />
-          </section>
+      <>
+        <Nav />
+        <Welcome />
+        <section className={style.content}>
+          <div className={style.meContainer}>
+            <About />
+            <Technologies />
+          </div>
+          <Projects />
           <Contact />
           <Footer />
-        </>
-      )}
+        </section>
+      </>
+      <div className={`${style.loaded} ${style.themeButtonContainer}`}>
+        <ThemeButton scale={'.6'} />
+      </div>
     </main>
   );
 }

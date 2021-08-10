@@ -1,0 +1,16 @@
+footer {
+  margin-top: 12rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  filter: brightness(0.5);
+}
+
+footer p {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+footer p a {
+  text-decoration: none;
+  color: var(--clr-accent);
+}

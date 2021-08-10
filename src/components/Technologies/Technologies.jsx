@@ -21,7 +21,7 @@ function Technologies() {
 
   return (
     <section className={style.techContainer}>
-      <h1 ref={header}>What I Do</h1>
+      <h1 ref={header}>How I Do It</h1>
       <div className={style.zones}>
         {zones.map((zone, index) => {
           return (

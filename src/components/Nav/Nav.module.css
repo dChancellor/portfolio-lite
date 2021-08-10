@@ -6,18 +6,24 @@ nav ul {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  margin: 1rem 1rem;
+  margin: 2rem 1rem;
   gap: 1rem;
 }
 nav ul li a {
   color: var(--clr-secondary);
   text-decoration: none;
 }
-
-nav ul li button {
+nav ul li a:hover {
+  filter: brightness(150%);
+}
+.resume {
   all: unset;
   background-color: var(--clr-secondary);
   border-radius: 10px;
   padding: 1rem 1.4rem;
   color: var(--clr-background);
+}
+.resume:hover {
+  filter: brightness(120%);
+  cursor: pointer;
 }
