@@ -1,9 +1,10 @@
 .heroSection {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   gap: 2rem;
+  margin-top: 2rem;
 }
 .contentContainer {
   display: flex;
@@ -39,7 +40,6 @@
   filter: contrast(10%);
   font-size: clamp(2rem, 3vw, 3rem);
   line-height: clamp(2rem, 3vw, 3rem);
-
 }
 .textContainer p {
   padding-top: 0.5rem;
@@ -101,4 +101,3 @@
     text-align: center;
   }
 }
-
